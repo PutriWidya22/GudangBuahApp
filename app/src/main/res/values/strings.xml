@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GudangBuahApp</string>
+    <string name="login" />
+    <string name="password" />
+    <string name="username" />
+    <string name="home_main" />
+    <string name="et_title" />
+</resources>

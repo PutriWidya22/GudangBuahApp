@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment">
+
+    <!-- fragment yang memuat list fragment atau data buah-->
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.putri.gudangbuahapp.fragments.list.ListFragment"
+        android:label="Data Buah"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+
+    <!-- fragment yang digunakan untuk menambahkan data buah -->
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.putri.gudangbuahapp.fragments.add.AddFragment"
+        android:label="Tambah Data Buah"
+        tools:layout="@layout/fragment_tambah_buah" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+
+    <!-- fragment yang digunakan untuk mengubah data buah-->
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.putri.gudangbuahapp.fragments.update.UpdateFragment"
+        android:label="Ubah Data Buah"
+        tools:layout="@layout/fragment_ubah_buah" >
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentBuah"
+            app:argType="com.putri.gudangbuahapp.Buah" />
+    </fragment>
+</navigation>

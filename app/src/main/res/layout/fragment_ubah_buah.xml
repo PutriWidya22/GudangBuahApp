@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- menggunakan constraintLayout dengan layout lebar dan tingginya menggunakan match_parent atau
+     disesuaikan dengan tampilan smartphone.
+     terdapat background dengan nama bg5 di folder drawable.
+     contextnya tertuju pada fragment.update.UpdateFragment.kt -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    tools:context=".fragments.update.UpdateFragment">
+
+    <!-- pada EditText berikut berfungsi untuk memasukkan text dengan type input textPersonName
+         dengan id "namaBuahUbah".
+         layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+         layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+    <EditText
+        android:id="@+id/namaBuahUbah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Masukkan Nama Buah"
+        android:inputType="textPersonName|textCapWords"
+        android:maxLength="15"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <!-- pada EditText berikut berfungsi untuk memasukkan text dengan type input number dengan id
+         "stokBuahUbah".
+         maxLength atau maximal number yang dimasukkan adalah 3.
+         layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+         layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+    <EditText
+        android:id="@+id/stokBuahUbah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Masukkan Stok"
+        android:inputType="number"
+        android:maxLength="3"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329" />
+
+    <!-- pada Button berikut memuat Button yang jika di klik akan menyimpan semua perubahan data
+         dengan id "btnUbah".
+         layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+         layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+    <Button
+        android:id="@+id/btnUbah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="Simpan Perubahan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stokBuahUbah" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

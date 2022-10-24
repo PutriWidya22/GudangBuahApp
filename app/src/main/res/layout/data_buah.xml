@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- menggunakan LinearLayout dengan layout lebar dan tingginya menggunakan match_parent atau
+     disesuaikan dengan tampilan smartphone.
+     idnya "dataBuahLL"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/dataBuahLL">
+
+    <!-- terdapat RelativeLayout dengan layout lebar dan tingginya menggunakan match_parent atau
+         disesuaikan dengan tampilan smartphone.
+         orientasinya horizontal. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+        <!-- terdapat LinearLayout dengan layout lebar dan tingginya menggunakan wrap_content atau
+             disesuaikan dengan isi konten.
+             orientasinya horizontal dengan grafitasi ke kiri. -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="left">
+
+            <!--terdapat textview untuk id buah, nama buah, dan stok.
+                 menggunakan layout wrap_content atau disesuaikan dengan isi konten
+                 ukuran textnya 20sp dan tebal.-->
+            <TextView
+                android:id="@+id/idBuah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="20dp"/>
+
+            <TextView
+                android:id="@+id/textNamaBuah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mangga"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/textStokBuah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(23)"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+        <!-- terdapat LinearLayout dengan layout lebar dan tingginya menggunakan wrap_content atau
+             disesuaikan dengan isi konten.
+             orientasinya horizontal dengan dengan padding 10dp. -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp">
+
+            <!-- terdapat imagebutton untuk icon ubah dan hapus.
+                 layout lebar dan tingginya menggunakan wrap_content atau disesuaikan dengan isi
+                 konten.
+                 iconnya berada di drawable. -->
+            <ImageButton
+                android:id="@+id/iconUbah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit"
+
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/iconHapus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- menggunakan constraintLayout dengan layout lebar dan tingginya menggunakan match_parent atau
+     disesuaikan dengan tampilan smartphone.
+     terdapat background dengan nama bg5 di folder drawable.
+     contextnya tertuju pada InformasiAplikasi.kt-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    tools:context=".InformasiAplikasi">
+
+    <!-- pada TextView berikut berisi text "Informasi Aplikasi", dengan id "textInfo", dengan ukuran
+         text 25sp dan style tebal atau bold. menggunakan layout wrap_content atau disesuaikan dengan
+         isi konten. -->
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informasi Aplikasi"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.159" />
+
+    <!-- pada TextView berikut berisi text "Fungsi Aplikasi : ", dengan id "textFungsi", dengan ukuran
+         text 20sp.
+         ukuran layout lebar 245dp dan tinggi 47dp. -->
+    <TextView
+        android:id="@+id/textFungsi"
+        android:layout_width="245dp"
+        android:layout_height="47dp"
+        android:text="Fungsi Aplikasi :"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+    <!-- pada TextView berikut berisi text penjelasan dari fungsi aplikasi, dengan id "textIsi",
+         dengan ukuran text 20sp.
+         ukuran layout lebar 324dp dan tinggi 166. -->
+    <TextView
+        android:id="@+id/textIsi"
+        android:layout_width="324dp"
+        android:layout_height="166dp"
+        android:text="Memudahkan Admin  toko untuk mencatat data buah beserta jumlahnya sehingga tidak dilakukan secara manual. dan terdapat fitur untuk hapus, edit, dan simpan data buah."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
+</androidx.constraintlayout.widget.ConstraintLayout>

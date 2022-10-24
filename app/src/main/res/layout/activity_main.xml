@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- menggunakan constraintLayout dengan layout lebar dan tingginya menggunakan match_parent atau
+     disesuaikan dengan tampilan smartphone.
+     terdapat background dengan nama bg5 di folder drawable.
+     contextnya tertuju pada MainActivity.kt-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5"
+    tools:context=".MainActivity">
+
+    <!-- pada LinearLayout berikut digunakan untuk membuat beberapa komponen seperti TextView,
+         EditText, Button dan lain-lain di dalam LinearLayout menjadi sejajar, bisa horizontal
+         maupun vertikal dengan android:orientation. disini LinearLayout diberi id dengan nama
+         "LinearLayout" yang lebar layoutnya "327dp", tingginya "407dp", warna backgroundnya #ffff
+         atau warna putih. menggunakan orientation vertical, jaraknya dengan garis dalam(padding)
+         diatur "15dp". -->
+
+    <!-- pada ImageView berikut memuat gambar yang berada pada package drawable dengan nama
+         file "admin1" dan memiliki id "imageView". lebar layoutnya "178dp" dan tingginya "134dp". -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="327dp"
+        android:layout_height="407dp"
+        android:background="#ffff"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614"
+        tools:ignore="MissingConstraints">
+
+        <!-- pada TextView berikut berisi text "LOGIN ADMIN", dengan id "textLogin", menggunakan
+             layout-gravity:center_horizontal atau text berada di posisi tengah secara horizontal.
+             textnya menggunakan rata kanan tengah atau center. text tersebut juga menggunakan warna
+             hitam atau dengan kode #000, ukurannya "25sp" dengan style "bold" atau tebal.-->
+        <TextView
+            android:id="@+id/textLogin"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:text="LOGIN ADMIN"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="282dp" />
+
+        <!-- pada TextView berikut berisi text "Username", dengan id "textNama".
+             layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+             layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+
+        <!-- pada EditText berikut berfungsi sebagai wadah user untuk memasukkan text dengan type
+             input textPersonName lalu inputan tersebut nantinya akan di kirimkan ke MainActivity.kt
+             idnya "editNama".
+             layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+             layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+        <TextView
+            android:id="@+id/textNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username" />
+
+        <EditText
+            android:id="@+id/editNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+        <!-- pada TextView berikut berisi text "Password", dengan id "textPass".
+             layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+             layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+        <TextView
+            android:id="@+id/textPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password" />
+
+        <!-- pada EditText berikut berfungsi sebagai wadah user untuk memasukkan text dengan type
+             input numberPassword yang ketika mengisikan password akan berubah menjadi bulat kecil
+             hitam, lalu inputan tersebut nantinya akan di kirimkan ke MainActivity.kt. idnya
+             "editPass".
+             layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+             layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="numberPassword"
+            android:minHeight="48dp"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+        <!-- pada Button tersebut digunakan untuk berpindah ke halaman selanjutnya serta mengirimkan
+             username dan password dari EditText. nama buttonnya "LOGIN" dengan id "btnLogin".
+             layout lebarnya menggunakan match_parent atau disesuaikan dengan tampilan smartphone.
+             layout tingginya menggunakan wrap_content atau disesuaikan dengan isi konten. -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="178dp"
+        android:layout_height="134dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189"
+        app:srcCompat="@drawable/admin1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
